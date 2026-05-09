@@ -1,16 +1,129 @@
-# React + Vite
+# MERN Authentication Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A complete React frontend for a MERN Authentication System with Login, Signup, Protected Routes, JWT Authentication, and React Router DOM.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Features
 
-## React Compiler
+- User Signup
+- User Login
+- JWT Token Authentication
+- Protected Home Route
+- Logout Functionality
+- Store Token in localStorage
+- Responsive Design
+- React Router DOM Navigation
+- Axios API Integration
+- Clean & Simple UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- React Router DOM
+- Axios
+- CSS
+
+---
+
+## 🔐 Authentication Flow
+
+### Signup
+
+User enters:
+
+- Name
+- Email
+- Password
+
+Data sent to backend API.
+
+---
+
+### Login
+
+- User logs in using email & password
+- JWT token received from backend
+- Token stored in localStorage
+
+---
+
+### Protected Route
+
+- Home page only accessible if token exists
+- Otherwise redirects to Login page
+
+---
+
+### Logout
+
+- Removes token from localStorage
+- Redirects user to Login page
+
+---
+
+## 🖥 Pages
+
+### Signup Page
+
+- Register new account
+- Redirect to login after successful signup
+
+---
+
+### Login Page
+
+- Login existing user
+- Save JWT token
+
+---
+
+### Home Page
+
+- Protected route
+- Displays:
+
+```bash
+Welcome [User Name]
+```
+
+- Logout button included
+
+---
+
+## 📱 Responsive Design
+
+- Fully responsive layout
+- Centered forms
+- Simple clean interface
+
+---
+
+## ⚙ Dependencies
+
+Install required packages:
+
+```bash
+npm install react-router-dom axios
+```
+
+---
+
+##  Preview Features
+
+✔ Signup Form  
+✔ Login Form  
+✔ JWT Authentication  
+✔ Protected Routes  
+✔ Logout System  
+✔ Axios API Calls
+
+---
+
+## 👩‍💻 Author
+
+**SanaCoder**
+
+Developed using React & MERN Stack.
