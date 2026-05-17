@@ -1,15 +1,18 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
-const ProtectedRoute = () => {
-  const token = localStorage.getItem('token');
+const ProtectedRoute = ({ allowedRoles }) => {
+  const { user } = useAuth();
 
-  // If there is no token, redirect to login page
-  if (!token) {
+  if (!user) {
     return <Navigate to="/login" replace />;
   }
 
-  // If there is a token, render the child components (protected routes)
+  if (allowedRoles && !allowedRoles.includes(user.role)) {
+    return <Navigate to={user.role === 'admin' ? '/admin-dashboard' : '/user-dashboard'} replace />;
+  }
+
   return <Outlet />;
 };
 
